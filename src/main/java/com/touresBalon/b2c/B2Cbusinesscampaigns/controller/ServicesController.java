@@ -29,10 +29,10 @@ public class ServicesController {
 
   @RequestMapping(
 	      value = "/getCampaignList",
-	      method = RequestMethod.POST,
+	      method = RequestMethod.GET,
 	      produces = MediaType.APPLICATION_JSON_VALUE)
-public @ResponseBody ResponseEntity<Object> getAllOrFilterCampaigns(@RequestBody FindCampaignRequest findCampaignRequest)  {
-	List<BaseCampaignResponse> campaignResponse = campaignService.findAll(findCampaignRequest);
+public @ResponseBody ResponseEntity<Object> getAllOrFilterCampaigns()  {
+	List<BaseCampaignResponse> campaignResponse = campaignService.findAll();
 	return new ResponseEntity<Object>(campaignResponse, HttpStatus.OK);
 }
  

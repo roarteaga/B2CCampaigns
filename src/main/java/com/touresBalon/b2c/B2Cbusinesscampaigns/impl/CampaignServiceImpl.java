@@ -24,7 +24,7 @@ public class CampaignServiceImpl implements ICampaignService {
 	private ICampaignMapper otpMapper;
 
 	@Override
-	public List<BaseCampaignResponse> findAll(FindCampaignRequest request) {
+	public List<BaseCampaignResponse> findAll() {
 		List<Campaign> productsList;
 		productsList = otpConsumer.findAll();
 		return otpMapper.buildCampaignListResponse(productsList);

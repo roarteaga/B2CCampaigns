@@ -1,4 +1,7 @@
+
 package com.touresBalon.b2c.B2Cbusinesscampaigns.dto;
+
+import java.util.Date;
 
 public class BaseCampaignResponse {
 	private long idCampaign;
@@ -7,8 +10,8 @@ public class BaseCampaignResponse {
 	private String urlImage;
 	private String description;
 	private long idProduct;
-	private String startDate;
-	private String endDate;
+	private Date startDate;
+	private Date endDate;
 	public long getIdCampaign() {
 		return idCampaign;
 	}
@@ -45,16 +48,16 @@ public class BaseCampaignResponse {
 	public void setIdProduct(long idProduct) {
 		this.idProduct = idProduct;
 	}
-	public String getStartDate() {
+	public Date getStartDate() {
 		return startDate;
 	}
-	public void setStartDate(String startDate) {
+	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
-	public String getEndDate() {
+	public Date getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(String endDate) {
+	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
 	

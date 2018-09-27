@@ -1,5 +1,7 @@
 package com.touresBalon.b2c.B2Cbusinesscampaigns.entities;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,27 +9,30 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
-@Table(name= "Campaign", schema = "G_USUARIO")
+@Table(name= "Campaign", schema = "dbo")
 public class Campaign {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
- 	@Column(name = "idCampaign")
+ 	@Column(name = "IDCAMPAIGN")
     private Long id;
-	@Column(name = "name")
+	@Column(name = "NAME")
     private String name;
- 	@Column(name = "idStateCampaign")
+ 	@Column(name = "IDSTATECAMPAIGN")
     private Long idStateCampaign;
- 	@Column(name = "urlImage")
+ 	@Column(name = "URLIMAGE")
     private String urlImage;
- 	@Column(name = "description")
+ 	@Column(name = "DESCRIPTION")
  	private String description;
- 	@Column(name = "idProduct")
+ 	@Column(name = "IDPRODUCT")
  	private Long idProduct;
- 	@Column(name = "startDate")
- 	private String startDate;
- 	@Column(name = "endDate")
- 	private String endDate;
+ 	@Column(name = "STARTDATE")
+ 	private Date startDate;
+ 	@Column(name = "ENDDATE")
+ 	private Date endDate;
  	
+ 	public Campaign() {
+ 		
+ 	}
  	public Campaign (Long id, String name, String urlImage, String description, Long idProduct) {
  		this.id=id;
  		this.name=name;
@@ -71,18 +76,18 @@ public class Campaign {
 	public void setIdProduct(Long idProduct) {
 		this.idProduct = idProduct;
 	}
-	public String getStartDate() {
+	public Date getStartDate() {
 		// TODO Auto-generated method stub
 		return this.startDate;
 	}
-	public void setStartDate(String startDate) 
+	public void setStartDate(Date startDate) 
 	{
 		this.startDate=startDate;		
 	}
-	public String getEndDate() {
+	public Date getEndDate() {
 		return this.endDate;
 	}
-	public void setEndDate(String endDate) {
+	public void setEndDate(Date endDate) {
 		this.endDate=endDate;
 	}
 }
